@@ -1,0 +1,110 @@
+Array
+(
+    [owner_id] => 1
+    [services] => Array
+        (
+            [0] => 3
+        )
+
+    [booking_date] => 2025-09-04
+    [start_time] => 09:00 AM
+)
+Array
+(
+    [owner_id] => 1
+    [services] => Array
+        (
+            [0] => 3
+        )
+
+    [booking_date] => 2025-09-04
+    [start_time] => 09:00 AM
+)
+Array
+(
+    [owner_id] => 1
+    [services] => Array
+        (
+            [0] => 3
+        )
+
+    [booking_date] => 2025-09-03
+    [start_time] => 09:00 AM
+)
+[15-Sep-2025 19:24:20 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\xampp\htdocs\HairSystem\get_bookings.php:73
+Stack trace:
+#0 C:\xampp\htdocs\HairSystem\get_bookings.php(73): mysqli_stmt->store_result()
+#1 {main}
+  thrown in C:\xampp\htdocs\HairSystem\get_bookings.php on line 73
+=== Mon, 15 Sep 2025 19:36:14 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-16
+    [booking_date] => 2025-09-16
+    [staff_type] => male
+    [staff_number] => 1
+    [services] => 37
+)
+
+=== Mon, 15 Sep 2025 19:39:45 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-17
+    [booking_date] => 2025-09-17
+    [staff_type] => male
+    [staff_number] => 1
+    [services] => 37
+)
+
+=== Mon, 15 Sep 2025 19:44:30 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-16
+    [booking_date] => 2025-09-16
+    [staff_type] => male
+    [staff_number] => 2
+    [services] => 37
+)
+
+=== Mon, 15 Sep 2025 19:45:43 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-16
+    [booking_date] => 2025-09-16
+    [staff_type] => male
+    [staff_number] => 1
+    [services] => 37
+)
+
+=== Mon, 15 Sep 2025 19:55:34 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-14
+    [booking_date] => 2025-09-14
+    [staff_type] => male
+    [staff_number] => 3
+    [services] => 37
+)
+
+=== Mon, 15 Sep 2025 20:00:13 +0200 ===
+POST:
+Array
+(
+    [owner_id] => 5
+    [date] => 2025-09-15
+    [booking_date] => 2025-09-15
+    [staff_type] => male
+    [staff_number] => 1
+    [services] => 37
+)
+
