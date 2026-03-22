@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HairSystem - Salon for Men & Women</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px 0;
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f39c12 !important;
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #f39c12 !important;
+    }
+    .btn-login {
+      background: #f39c12;
+      border-radius: 25px;
+      padding: 6px 20px;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .btn-login:hover {
+      background: #d35400;
+      color: #fff;
+    }
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1621605813332-31e1f1d3ea9a') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1.2s;
+    }
+    .btn-main {
+      background: #f39c12;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .btn-main:hover {
+      background: #d35400;
+      color: #fff;
+    }
+    /* Section titles */
+    h2.section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+    h2.section-title::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 3px;
+      background: #f39c12;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    /* Services */
+    .services i {
+      font-size: 40px;
+      color: #f39c12;
+      margin-bottom: 15px;
+    }
+    .services .card {
+      background: #1c1c1c;
+      border: none;
+      transition: transform .3s, box-shadow .3s;
+      cursor: pointer;
+    }
+    .services .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    /* Appointment */
+    .appointment {
+      background: url('https://images.unsplash.com/photo-1600334129128-6a5b6b43e2a0') no-repeat center center/cover;
+      padding: 80px 0;
+      position: relative;
+    }
+    .appointment::after {
+      content:"";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.7);
+    }
+    .appointment .container {
+      position: relative;
+      z-index: 2;
+    }
+    .appointment form {
+      background: rgba(28,28,28,0.95);
+      border-radius: 10px;
+    }
+    /* Testimonials */
+    .testimonials {
+      background: #1a1a1a;
+      padding: 60px 0;
+    }
+    .carousel-item p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    /* Works gallery */
+    #works img {
+      transition: transform .3s;
+    }
+    #works img:hover {
+      transform: scale(1.05);
+    }
+    /* Footer */
+    footer {
+      background: #000;
+      padding: 40px 0;
+      text-align: center;
+      color: #aaa;
+    }
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">HairSystem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#appointment" class="nav-link">Appointment</a></li>
+        <li class="nav-item"><a href="#works" class="nav-link">Our Works</a></li>
+        <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
+      </ul>
+      <a href="auth.php" class="btn btn-login ms-3">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex" id="home">
+  <div class="hero-content text-center">
+    <h1 class="display-3 fw-bold">Look Different With Us</h1>
+    <p class="lead">Professional Hair Salon for Men & Women | Styling • Coloring • Spa</p>
+    <a href="#appointment" class="btn btn-main mt-3">Book Appointment</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5 text-center">
+  <div class="container">
+    <h2 class="section-title">About HairSystem</h2>
+    <p class="lead">We are a premium salon providing haircuts, styling, coloring, facials, and spa services for both men and women since 2000. Our professional stylists bring out the best in you with modern techniques and styles.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <i class="fa-solid fa-scissors"></i>
+          <h5>Haircut</h5>
+          <p>Trendy and classic haircuts for men & women tailored to your style.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <i class="fa-solid fa-spa"></i>
+          <h5>Spa & Facial</h5>
+          <p>Relax with our rejuvenating spa and facial treatments.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-4">
+          <i class="fa-solid fa-brush"></i>
+          <h5>Hair Coloring</h5>
+          <p>Professional coloring and highlights with premium products.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment -->
+<section id="appointment" class="appointment">
+  <div class="container">
+    <h2 class="text-center fw-bold text-white mb-4">Book Your Appointment</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="p-4">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Phone">
+          </div>
+          <div class="mb-3">
+            <select class="form-select">
+              <option>Select Service</option>
+              <option>Haircut</option>
+              <option>Styling</option>
+              <option>Facial & Spa</option>
+              <option>Hair Coloring</option>
+            </select>
+          </div>
+          <button class="btn btn-main w-100">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials text-center">
+  <div class="container">
+    <h2 class="section-title">What Clients Say</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>"Amazing salon! They styled my hair perfectly for my wedding."</p>
+          <h6>- Priya Sharma</h6>
+        </div>
+        <div class="carousel-item">
+          <p>"Best haircut experience I've ever had. Highly recommend!"</p>
+          <h6>- John Doe</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Works -->
+<section id="works" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">Our Works</h2>
+    <div class="row g-3">
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1600334129128-6a5b6b43e2a0" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1621605813332-31e1f1d3ea9a" class="img-fluid rounded"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" class="img-fluid rounded"></div>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section id="news" class="py-5 text-center" style="background:#1a1a1a;">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white p-3">
+          <h5>Top Hair Trends 2025</h5>
+          <p>Explore the latest haircuts and colors trending this year.</p>
+          <a href="#" class="text-warning">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white p-3">
+          <h5>Bridal Hair Styling</h5>
+          <p>Check out our bridal styling packages for weddings & events.</p>
+          <a href="#" class="text-warning">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white p-3">
+          <h5>Hair Care Tips</h5>
+          <p>Learn how to maintain strong and shiny hair with our guide.</p>
+          <a href="#" class="text-warning">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 HairSystem. All Rights Reserved.</p>
+  <div>
+    <a href="#"><i class="fab fa-facebook me-3"></i></a>
+    <a href="#"><i class="fab fa-instagram me-3"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
